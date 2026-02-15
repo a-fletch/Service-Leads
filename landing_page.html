@@ -30,7 +30,7 @@
     </p>
 </header>
 <main>
-    <form id="leadform" action="https://script.google.com/macros/s/AKfycbyJ8AojR2hY6MWW1Z-ofSLd4gMB9IwEPOqGuL_Pd7TPqwjokvRqmBRP8Y3-8aCPeRzl/exec" method="POST">
+    <form id="leadform">
         <label for="business">Business Name</label>
         <input type="text" id="business" name="business" required>
 
@@ -67,6 +67,35 @@
         </p>
     </div>
 </main>
+
+<script>
+document.getElementById("leadform").addEventListener("submit", async function(e) {
+  e.preventDefault(); // stop normal form submission
+
+  // Optional: Collect form data if needed
+  const data = Object.fromEntries(new FormData(this).entries());
+
+  try {
+    // Replace the URL with your Apps Script web app URL when ready
+    const response = await fetch("https://script.google.com/macros/s/AKfycbyJ8AojR2hY6MWW1Z-ofSLd4gMB9IwEPOqGuL_Pd7TPqwjokvRqmBRP8Y3-8aCPeRzl/exec", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      // Redirect to the thank you page after successful submission
+      window.location.href = "thank-you.html";
+    } else {
+      alert("Error submitting form. Please try again.");
+    }
+  } catch (err) {
+    // Network or other fetch errors
+    alert("Error submitting form. Please try again.");
+    console.error(err);
+  }
+});
+</script>
 
 </body>
 </html>
