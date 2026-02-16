@@ -145,7 +145,27 @@
 
 
 <script>
-    /* Your existing form submit script goes here */
+document.getElementById("leadform").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  try {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbyJ8AojR2hY6MWW1Z-ofSLd4gMB9IwEPOqGuL_Pd7TPqwjokvRqmBRP8Y3-8aCPeRzl/exec", {
+      method: "POST",
+      body: formData
+    });
+
+    if (response.ok) {
+      window.location.href = "thank_you.html";
+    } else {
+      alert("Error submitting form. Please try again.");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Error submitting form. Please try again.");
+  }
+});
 </script>
 
 </body>
