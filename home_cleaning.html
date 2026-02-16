@@ -6,7 +6,81 @@
 <title>Home Cleaning Quote</title>
 
 <style>
-/* Copy your existing styles here */
+    body { font-family: Arial; background: #f7f7f7; color: #333; margin: 0; }
+    header { height: 450px; /* adjust as needed */
+    background-image: url("images/prohive_logo.png");
+    background-size: contain;       /* fills entire area */
+    background-position: center;  /* keeps center visible */
+    background-repeat: no-repeat;
+    background-color: #0b141d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center; }
+
+    /* Horizontal menu bar */
+    .menu-bar {
+        background-color: #0b141d;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* ONLY top-level menu */
+    .menu-bar > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-bar li {
+        margin: 0 15px;
+        position: relative;
+    }
+
+    .menu-bar a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 15px 10px;
+        display: block;
+    }
+
+    /* Dropdown hidden by default */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #2ab0b0;
+        min-width: 200px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Show on hover */
+    .menu-bar li.dropdown:hover > .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content li a {
+        padding: 10px 15px;
+        font-weight: normal;
+    }
+
+    .dropdown-content li a:hover {
+        background-color: #2c9490;
+    }
+
+    main { max-width: 600px; margin: 40px auto; padding: 20px; background: #f7f7f7; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+    form label { display: block; margin: 15px 0 5px; font-weight: bold; }
+    form input, form select, form textarea { width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; font-size: 1rem; }
+    form button { margin-top: 20px; padding: 12px 20px; font-size: 1rem; background: #0073e6; color: #f7f7f7; border: none; border-radius: 4px; cursor: pointer; }
+    form button hover { background: #005bb5; }
+    .trust { margin-top: 30px; text-align: center; font-size: 0.9rem; color: #555; }
 </style>
 
 </head>
