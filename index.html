@@ -86,6 +86,77 @@
         margin: 30px 0 20px;
         color: #0b141d;
 
+        section {
+          padding: 80px 20px;
+          text-align: center;
+        }
+
+        .hero {
+          background: #ffffff;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+          color: #0b141d;
+        }
+
+        .hero p {
+          max-width: 700px;
+          margin: 0 auto 30px;
+          font-size: 1.1rem;
+          color: #555;
+        }
+
+        .btn-primary {
+          background: #2ab0b0;
+          color: white;
+          padding: 12px 24px;
+          text-decoration: none;
+          border-radius: 6px;
+          margin-right: 10px;
+        }
+
+        .btn-primary:hover {
+          background: #238e8e;
+        }
+
+        .btn-secondary {
+          border: 2px solid #2ab0b0;
+          color: #2ab0b0;
+          padding: 10px 22px;
+          text-decoration: none;
+          border-radius: 6px;
+        }
+
+        .service-grid {
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+          flex-wrap: wrap;
+          margin-top: 40px;
+        }
+
+        .service-card {
+          background: white;
+          padding: 30px;
+          border-radius: 8px;
+          width: 280px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .steps {
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          flex-wrap: wrap;
+          margin-top: 40px;
+        }
+
+        .step {
+          max-width: 250px;
+        }
+
         main { max-width: 600px; margin: 40px auto; padding: 20px; background: #f7f7f7; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
         form label { display: block; margin: 15px 0 5px; font-weight: bold; }
         form input, form select, form textarea { width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; font-size: 1rem; }
@@ -115,12 +186,60 @@
   </ul>
 </nav>
 <main>
-    <label for="Commitment" class="form-section">
-        ProHive is designed to provide high quality businesses to help with your service or next project. /n We only partner with highly rated local business to ensure quality and trust the jobs is done right.
-    </label>
-    <label for="Tagline" class="form-section">Tagline / Value Proposition:</label>
-    <label for="Service Overview" class="form-section">Service Overview:</label>
-    <label for="How it Works" class="form-section">How It Works:</label>
+    <section class="hero">
+    <h1>Trusted Local Professionals. Quality Work Done Right.</h1>
+    <p>
+      ProHive connects you with top-rated local professionals for your next service or project.
+      We carefully partner with highly reviewed businesses so you can book with confidence and
+      know the job will be done right.
+    </p>
+    <div class="hero-buttons">
+      <a href="#services" class="btn-primary">Get Started</a>
+      <a href="#how-it-works" class="btn-secondary">How It Works</a>
+    </div>
+  </section>
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Mobile RV Services</h3>
+        <p>Professional on-site RV window repair and replacement.</p>
+      </div>
+      <div class="service-card">
+        <h3>Home Cleaning</h3>
+        <p>Reliable, top-rated cleaning professionals for your home.</p>
+      </div>
+      <div class="service-card">
+        <h3>Mobile Detailing</h3>
+        <p>Convenient detailing services brought directly to you.</p>
+      </div>
+    </div>
+  </section>
+  <section id="how-it-works" class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>1. Submit a Request</h3>
+        <p>Tell us about your service needs.</p>
+      </div>
+      <div class="step">
+        <h3>2. Get Matched</h3>
+        <p>We connect you with vetted local professionals.</p>
+      </div>
+      <div class="step">
+        <h3>3. Get It Done</h3>
+        <p>Choose your provider and complete your project with confidence.</p>
+      </div>
+    </div>
+  </section>
+  <section class="trust-section">
+    <h2>Why Choose ProHive?</h2>
+    <ul>
+      <li>✔ Highly Rated Local Businesses</li>
+      <li>✔ Carefully Vetted Partners</li>
+      <li>✔ Fast & Reliable Service</li>
+    </ul>
+  </section>
 </main>
 
 <script>
