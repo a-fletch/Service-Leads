@@ -164,6 +164,56 @@
         form button { margin-top: 20px; padding: 12px 20px; font-size: 1rem; background: #0073e6; color: #f7f7f7; border: none; border-radius: 4px; cursor: pointer; }
         form button hover { background: #005bb5; }
         .trust { margin-top: 30px; text-align: center; font-size: 0.9rem; color: #555; }
+
+        .service-carousel-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          margin-top: 40px;
+        }
+
+        .service-carousel {
+          display: flex;
+          gap: 30px;
+          overflow: hidden;      /* hide extra columns */
+          width: 320px;           /* show only 1 column at a time */
+          scroll-behavior: smooth;
+        }
+
+        .service-column {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          flex: 0 0 auto;        /* prevent shrinking */
+          width: 320px;           /* column width matches card */
+        }
+
+        .service-card {
+          background: white;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .service-buttons {
+          display: flex;
+          gap: 20px;
+          margin-top: 20px;
+        }
+
+        .scroll-btn {
+          background: #2ab0b0;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          padding: 10px 20px;
+          cursor: pointer;
+        }
+
+        .scroll-btn:hover {
+          background: #238e8e;
+        }
     </style>
 </head>
 <body>
@@ -187,7 +237,7 @@
   </ul>
 </nav>
 <main>
-    <section class="hero">
+  <section class="hero">
     <h1>Trusted Local Professionals. Quality Work Done Right.</h1>
     <p>
       ProHive connects you with top-rated local professionals for your next service or project.
@@ -201,18 +251,62 @@
   </section>
   <section id="services" class="services">
     <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <h3>Mobile RV Services</h3>
-        <p>Professional on-site RV window repair and replacement.</p>
+  
+    <div class="service-carousel-wrapper">
+      <div class="service-carousel">
+        <!-- Column 1 -->
+        <div class="service-column">
+          <div class="service-card">
+            <h3>Mobile RV Services</h3>
+            <p>Professional on-site RV window repair and replacement.</p>
+          </div>
+          <div class="service-card">
+            <h3>Home Cleaning</h3>
+            <p>Reliable, top-rated cleaning professionals for your home.</p>
+          </div>
+          <div class="service-card">
+            <h3>Mobile Detailing</h3>
+            <p>Convenient detailing services brought directly to you.</p>
+          </div>
+        </div>
+  
+        <!-- Column 2 -->
+        <div class="service-column">
+          <div class="service-card">
+            <h3>HVAC Services</h3>
+            <p>Expert heating and cooling solutions for your home.</p>
+          </div>
+          <div class="service-card">
+            <h3>Plumbing</h3>
+            <p>Fast and reliable plumbing services at your convenience.</p>
+          </div>
+          <div class="service-card">
+            <h3>Electrical Work</h3>
+            <p>Certified electricians for safe and professional service.</p>
+          </div>
+        </div>
+  
+        <!-- Column 3 -->
+        <div class="service-column">
+          <div class="service-card">
+            <h3>Landscaping</h3>
+            <p>Beautify your property with our professional landscaping team.</p>
+          </div>
+          <div class="service-card">
+            <h3>Pest Control</h3>
+            <p>Keep your home pest-free with our expert treatments.</p>
+          </div>
+          <div class="service-card">
+            <h3>Handyman Services</h3>
+            <p>Reliable repairs and improvements for your home or office.</p>
+          </div>
+        </div>
       </div>
-      <div class="service-card">
-        <h3>Home Cleaning</h3>
-        <p>Reliable, top-rated cleaning professionals for your home.</p>
-      </div>
-      <div class="service-card">
-        <h3>Mobile Detailing</h3>
-        <p>Convenient detailing services brought directly to you.</p>
+  
+      <!-- Scroll Buttons Underneath -->
+      <div class="service-buttons">
+        <button class="scroll-btn left-btn">&#8592; Previous</button>
+        <button class="scroll-btn right-btn">Next &#8594;</button>
       </div>
     </div>
   </section>
@@ -266,6 +360,21 @@ document.getElementById("leadform").addEventListener("submit", async function(e)
   }
 });
 </script>
+<script>
+  const carousel = document.querySelector('.service-carousel');
+  const leftBtn = document.querySelector('.left-btn');
+  const rightBtn = document.querySelector('.right-btn');
+  
+  const columnWidth = document.querySelector('.service-column').offsetWidth + 30; // column + gap
+  
+  leftBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: -columnWidth, behavior: 'smooth' });
+  });
+  
+  rightBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: columnWidth, behavior: 'smooth' });
+  });
+  </script>
 
 </body>
 </html>
