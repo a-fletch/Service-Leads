@@ -4,13 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="device-width, initial-scale=1.0">
     <title>
-        Leads POC
+        www.ProHive.us
     </title>
     <style>
         body { font-family: Arial; background: #f7f7f7; color: #333; margin: 0; }
-        header { background: #0073e6; color: #f7f7f7; text-align: center; padding: 40px 20px; }
-        header h1 { margin: 0; font-size: 2rem; }
-        header p { margin: 10px 0 0; font-size: 1.1rem; }
+        header { height: 400px; /* adjust as needed */
+        background-image: url("images/prohive_logo.png");
+        background-size: contain;       /* fills entire area */
+        background-position: center;  /* keeps center visible */
+        background-repeat: no-repeat;
+        background-color: #0b141d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center; }
+
+        /* Horizontal menu bar */
+        .menu-bar {
+            background-color: #0b141d;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* ONLY top-level menu */
+        .menu-bar > ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu-bar li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .menu-bar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 15px 10px;
+            display: block;
+        }
+
+        /* Dropdown hidden by default */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2ab0b0;
+            min-width: 200px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Show on hover */
+        .menu-bar li.dropdown:hover > .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content li a {
+            padding: 10px 15px;
+            font-weight: normal;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #2c9490;
+        }
+
+        /* Form Titles */
+        .form-section {
+        display: block;
+        text-align: center;
+        font-family: 'Poppins', Garamond, serif;
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin: 30px 0 20px;
+        color: #0b141d;
+        }
+
+        section {
+          padding: 80px 20px;
+          text-align: center;
+        }
+
+        .hero {
+          background: #ffffff;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+          color: #0b141d;
+        }
+
+        .hero p {
+          max-width: 700px;
+          margin: 0 auto 30px;
+          font-size: 1.1rem;
+          color: #555;
+        }
+
+        .btn-primary {
+          background: #2ab0b0;
+          color: white;
+          padding: 12px 24px;
+          text-decoration: none;
+          border-radius: 6px;
+          margin-right: 10px;
+        }
+
+        .btn-primary:hover {
+          background: #238e8e;
+        }
+
+        .btn-secondary {
+          border: 2px solid #2ab0b0;
+          color: #2ab0b0;
+          padding: 10px 22px;
+          text-decoration: none;
+          border-radius: 6px;
+        }
+
+        .service-grid {
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+          flex-wrap: wrap;
+          margin-top: 40px;
+        }
+
+        .service-card {
+          background: white;
+          padding: 30px;
+          border-radius: 8px;
+          width: 280px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .steps {
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          flex-wrap: wrap;
+          margin-top: 40px;
+        }
+
+        .step {
+          max-width: 250px;
+        }
+
         main { max-width: 600px; margin: 40px auto; padding: 20px; background: #f7f7f7; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
         form label { display: block; margin: 15px 0 5px; font-weight: bold; }
         form input, form select, form textarea { width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; font-size: 1rem; }
@@ -22,50 +169,78 @@
 <body>
 
 <header>
-    <h1>
-        Get Trusted Services
-    </h1>
-    <p>
-        We connect you with vetted local services
-    </p>
 </header>
+<nav class="menu-bar">
+  <ul>
+    <li><a href="index.html">Home</a></li>  
+    <li class="dropdown">
+      <a href="#services">Services</a>
+      <ul class="dropdown-content">
+        <li><a href="#hvac">HVAC</a></li>
+        <li><a href="rv_windows.html">Mobile RV</a></li>
+        <li><a href="home_cleaning.html">Home Cleaning</a></li>
+        <li><a href="#hvac">Mobile Detailing</a></li>
+      </ul>
+    </li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact-us">Contact Us</a></li>
+  </ul>
+</nav>
 <main>
-    <form id="leadform">
-        <label for="business">Business Name</label>
-        <input type="text" id="business" name="business" required>
-
-        <label for="contact">Contact Name</label>
-        <input type="text" id="contact" name="contact" required>
-
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email" required>
-
-        <label for="phone">Phone</label>
-        <input type="text" id="phone" name="phone" required>
-
-        <label for="address"> Office Address</label>
-        <input type="text" id="address" name="address" required>
-
-        <label for="size">Office Size (sq ft)</label>
-        <input type="text" id="size" name="size" required>
-
-        <label for="frequency">Service Frequency</label>
-        <select id="frequency" name="frequency" required>
-            <option value="">Select</option>
-            <option value="Weekly">Weekly</option>
-            <option value="Biweekly">Biweekly</option>
-            <option value="Monthly">Monthly</option>
-        </select>
-        <label for="notes">Additional Notes</label>
-        <textarea id="notes" name="notes" rows="4"></textarea>
-        <button type="submit">Get a Quote</button>
-    </form>
-
-    <div class="trust">
-        <p>
-            Licensed & Insured Services
-        </p>
+    <section class="hero">
+    <h1>Trusted Local Professionals. Quality Work Done Right.</h1>
+    <p>
+      ProHive connects you with top-rated local professionals for your next service or project.
+      We carefully partner with highly reviewed businesses so you can book with confidence and
+      know the job will be done right.
+    </p>
+    <div class="hero-buttons">
+      <a href="#services" class="btn-primary">Get Started</a>
+      <a href="#how-it-works" class="btn-secondary">How It Works</a>
     </div>
+  </section>
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Mobile RV Services</h3>
+        <p>Professional on-site RV window repair and replacement.</p>
+      </div>
+      <div class="service-card">
+        <h3>Home Cleaning</h3>
+        <p>Reliable, top-rated cleaning professionals for your home.</p>
+      </div>
+      <div class="service-card">
+        <h3>Mobile Detailing</h3>
+        <p>Convenient detailing services brought directly to you.</p>
+      </div>
+    </div>
+  </section>
+  <section id="how-it-works" class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>1. Submit a Request</h3>
+        <p>Tell us about your service needs.</p>
+      </div>
+      <div class="step">
+        <h3>2. Get Matched</h3>
+        <p>We connect you with vetted local professionals.</p>
+      </div>
+      <div class="step">
+        <h3>3. Get It Done</h3>
+        <p>Choose your provider and complete your project with confidence.</p>
+      </div>
+    </div>
+  </section>
+  <section class="trust-section">
+    <h2>Why Choose ProHive?</h2>
+    <ul>
+      <li>✔ Highly Rated Local Businesses</li>
+      <li>✔ Carefully Vetted Partners</li>
+      <li>✔ Fast & Reliable Service</li>
+    </ul>
+  </section>
 </main>
 
 <script>
