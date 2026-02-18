@@ -275,49 +275,51 @@
         /*Mobile*/
         @media (max-width: 768px) {
 
-        section {
-          padding: 60px 15px;
-        }
-
-        .hero h1 {
-          font-size: 1.8rem;
-        }
-
-        .hero p {
-          font-size: 1rem;
-        }
-
-        .hero-buttons {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-        }
-
-        .btn-primary,
-        .btn-secondary {
-          width: 100%;
-          margin: 0;
-        }
-
-        .steps {
-          flex-direction: column;
-          align-items: center;
-          gap: 25px;
-          margin-top: 40px;
-        }
-
-        .step:nth-child(3) {
-          margin-top: 0;
-        }
-
-        .menu-bar > ul {
-          flex-direction: column;
-        }
-
-        .menu-bar li {
-          margin: 0;
-        }
-
+          section {
+            padding: 60px 15px;
+          }
+        
+          .hero h1 {
+            font-size: 1.8rem;
+          }
+        
+          .hero p {
+            font-size: 1rem;
+          }
+        
+          .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+          }
+        
+          .btn-primary,
+          .btn-secondary {
+            width: auto;
+            min-width: 120px;
+            margin: 0 auto;
+          }
+        
+          .steps {
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            margin-top: 40px;
+          }
+        
+          .step {
+            max-width: 280px;
+          }
+        
+          .trust-card {
+            max-width: 280px;
+          }
+        
+          .step:nth-child(3) {
+            margin-top: 0;
+          }
+        
         }
 
     </style>
