@@ -211,6 +211,12 @@
           padding: 20px;
           border-radius: 8px;
           box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+          transition: transform 0.2s ease, box-shadow 0.2s ease; /* add transition */
+        }
+
+        .service-card-link:hover .service-card {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0,0,0,0.12);
         }
 
         .service-buttons {
@@ -322,6 +328,12 @@
         
         }
 
+        .service-card-link {
+          text-decoration: none; /* Remove underline */
+          color: inherit;        /* Keep the text color */
+          display: block;        /* Fill the entire card */
+        }
+
     </style>
 </head>
 <body>
@@ -362,53 +374,120 @@
   
     <div class="service-carousel-wrapper">
       <div class="service-carousel">
+  
         <!-- Column 1 -->
         <div class="service-column">
-          <div class="service-card">
-            <h3>Mobile RV Services</h3>
-            <p>Professional on-site RV window repair and replacement.</p>
-          </div>
-          <div class="service-card">
-            <h3>Home Cleaning</h3>
-            <p>Reliable, top-rated cleaning professionals for your home.</p>
-          </div>
-          <div class="service-card">
-            <h3>Mobile Detailing</h3>
-            <p>Convenient detailing services brought directly to you.</p>
-          </div>
+          <a href="mobile_rv.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Mobile RV Services</h3>
+              <p>Professional RV window repair and replacement.</p>
+            </div>
+          </a>
+  
+          <a href="home_cleaning.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Home Cleaning</h3>
+              <p>Reliable, top-rated cleaning professionals for your home.</p>
+            </div>
+          </a>
+  
+          <a href="office_cleaning.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Office Cleaning</h3>
+              <p>Professional cleaning solutions to keep your workspace spotless and organized.</p>
+            </div>
+          </a>
         </div>
   
         <!-- Column 2 -->
         <div class="service-column">
-          <div class="service-card">
-            <h3>HVAC Services</h3>
-            <p>Expert heating and cooling solutions for your home.</p>
-          </div>
-          <div class="service-card">
-            <h3>Plumbing</h3>
-            <p>Fast and reliable plumbing services at your convenience.</p>
-          </div>
-          <div class="service-card">
-            <h3>Electrical Work</h3>
-            <p>Certified electricians for safe and professional service.</p>
-          </div>
+          <a href="flooring.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Flooring Services</h3>
+              <p>Expert installation and repair for hardwood, tile, and laminate floors.</p>
+            </div>
+          </a>
+  
+          <a href="roofing.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Roofing Services</h3>
+              <p>Reliable roof repairs, maintenance, and replacement to protect your home.</p>
+            </div>
+          </a>
+  
+          <a href="mobile_detailing.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Mobile Detailing</h3>
+              <p>Convenient detailing services brought directly to you.</p>
+            </div>
+          </a>
         </div>
   
         <!-- Column 3 -->
         <div class="service-column">
-          <div class="service-card">
-            <h3>Landscaping</h3>
-            <p>Beautify your property with our professional landscaping team.</p>
-          </div>
-          <div class="service-card">
-            <h3>Pest Control</h3>
-            <p>Keep your home pest-free with our expert treatments.</p>
-          </div>
-          <div class="service-card">
-            <h3>Handyman Services</h3>
-            <p>Reliable repairs and improvements for your home or office.</p>
-          </div>
+          <a href="painting.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Painting Services</h3>
+              <p>High-quality interior and exterior painting for a fresh, polished look.</p>
+            </div>
+          </a>
+  
+          <a href="handyman.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Handyman Services</h3>
+              <p>Skilled professionals for repairs and improvements around your home or office.</p>
+            </div>
+          </a>
+  
+          <a href="tree_removal.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Tree Removal Services</h3>
+              <p>Safe and efficient tree trimming, removal, and maintenance services.</p>
+            </div>
+          </a>
         </div>
+  
+        <!-- Column 4 -->
+        <div class="service-column">
+          <a href="hvac.html" class="service-card-link">
+            <div class="service-card">
+              <h3>HVAC Services</h3>
+              <p>Expert heating and cooling solutions for your home.</p>
+            </div>
+          </a>
+  
+          <a href="plumbing.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Plumbing Services</h3>
+              <p>Fast and reliable plumbing services at your convenience.</p>
+            </div>
+          </a>
+  
+          <a href="electrical.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Electrical Services</h3>
+              <p>Certified electricians for safe and professional service.</p>
+            </div>
+          </a>
+        </div>
+  
+        <!-- Column 5 -->
+        <div class="service-column">
+          <a href="landscaping.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Landscaping Services</h3>
+              <p>Beautify your property with our professional landscaping team.</p>
+            </div>
+          </a>
+  
+          <a href="pest_control.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Pest Control</h3>
+              <p>Keep your home pest-free with our expert treatments.</p>
+            </div>
+          </a>
+        </div>
+  
       </div>
   
       <!-- Scroll Buttons Underneath -->
