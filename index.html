@@ -49,33 +49,6 @@
             display: block;
         }
 
-        /* Dropdown hidden by default */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #2ab0b0;
-            min-width: 200px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        /* Show on hover */
-        .menu-bar li.dropdown:hover > .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content li a {
-            padding: 10px 15px;
-            font-weight: normal;
-        }
-
-        .dropdown-content li a:hover {
-            background-color: #2c9490;
-        }
-
         /* Form Titles */
         .form-section {
         display: block;
@@ -343,15 +316,7 @@
 <nav class="menu-bar">
   <ul>
     <li><a href="index.html">Home</a></li>  
-    <li class="dropdown">
-      <a href="#services">Services</a>
-      <ul class="dropdown-content">
-        <li><a href="#hvac">HVAC</a></li>
-        <li><a href="rv_windows.html">Mobile RV</a></li>
-        <li><a href="home_cleaning.html">Home Cleaning</a></li>
-        <li><a href="#hvac">Mobile Detailing</a></li>
-      </ul>
-    </li>
+    <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#join-us">Join Us</a></li>
   </ul>
@@ -377,7 +342,7 @@
   
         <!-- Column 1 -->
         <div class="service-column">
-          <a href="rv_windows.html" class="service-card-link">
+          <a href="mobile_rv.html" class="service-card-link">
             <div class="service-card">
               <h3>Mobile RV Services</h3>
               <p>Professional RV window repair and replacement.</p>
