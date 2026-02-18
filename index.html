@@ -223,6 +223,45 @@
         .scroll-btn:hover {
           background: #238e8e;
         }
+
+        .trust-section {
+          text-align: center;
+        }
+
+        .trust-card {
+          background: white;
+          padding: 30px 40px;
+          border-radius: 8px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+          width: 400px;
+          margin: 40px auto 0;  /* centers the card */
+        }
+
+        .trust-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .trust-list li {
+          font-size: 1.1rem;
+          margin: 15px 0;
+        }
+
+        section + section {
+          position: relative;
+        }
+
+        section + section::before {
+          content: "";
+          display: block;
+          width: 800px;
+          height: 3px;
+          background: #2ab0b0;
+          margin: 0 auto 40px;
+          border-radius: 3px;
+        }
+
     </style>
 </head>
 <body>
@@ -242,7 +281,7 @@
       </ul>
     </li>
     <li><a href="#about">About</a></li>
-    <li><a href="#contact-us">Contact Us</a></li>
+    <li><a href="#join-us">Join Us</a></li>
   </ul>
 </nav>
 <main>
@@ -338,11 +377,14 @@
   </section>
   <section class="trust-section">
     <h2>Why Choose ProHive?</h2>
-    <ul>
-      <li>✔ Highly Rated Local Businesses</li>
-      <li>✔ Carefully Vetted Partners</li>
-      <li>✔ Fast & Reliable Service</li>
-    </ul>
+  
+    <div class="trust-card">
+      <ul class="trust-list">
+        <li>✔ Highly Rated Local Businesses</li>
+        <li>✔ Carefully Vetted Partners</li>
+        <li>✔ Fast & Reliable Service</li>
+      </ul>
+    </div>
   </section>
 </main>
 
