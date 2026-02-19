@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>www.ProHive.us/tree_removal_service</title>
+
+<style>
+    body { font-family: Arial; background: #f7f7f7; color: #333; margin: 0; }
+    header { height: 450px; /* adjust as needed */
+    background-image: url("images/prohive_logo.png");
+    background-size: contain;       /* fills entire area */
+    background-position: center;  /* keeps center visible */
+    background-repeat: no-repeat;
+    background-color: #0b141d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center; }
+
+    /* Horizontal menu bar */
+    .menu-bar {
+        background-color: #0b141d;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* ONLY top-level menu */
+    .menu-bar > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-bar li {
+        margin: 0 15px;
+        position: relative;
+    }
+
+    .menu-bar a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 15px 10px;
+        display: block;
+    }
+
+    /* Form Titles */
+    .form-section {
+    display: block;
+    text-align: center;
+    font-family: 'Poppins', Garamond, serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 30px 0 20px;
+    color: #0b141d;
+    }
+    
+    main { max-width: 600px; margin: 40px auto; padding: 20px; background: #f7f7f7; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+    form label {
+        display: block; 
+        margin: 15px 0 5px; 
+        font-family: 'Poppins', Garamond, serif;
+        font-weight: 500;
+        color: #0b141d;
+    }
+    form input, form select, form textarea { width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; font-size: 1rem; }
+    form button { margin-top: 20px; padding: 12px 20px; font-size: 1rem; background: #0073e6; color: #f7f7f7; border: none; border-radius: 4px; cursor: pointer; }
+    form button hover { background: #005bb5; }
+    .trust { margin-top: 30px; text-align: center; font-size: 0.9rem; color: #555; }
+</style>
+
+</head>
+<body>
+
+<header></header>
+
+<nav class="menu-bar">
+  <ul>
+    <li><a href="index.html">Home</a></li>  
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact-us">Contact Us</a></li>
+  </ul>
+</nav>
+
+<main>
+    <form id="leadform">
+        <label for="personalInfo" class="form-section">Contact Information:</label>
+        
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="zipCode">ZIP Code</label>
+        <input type="text" id="zipCode" name="zipCode" required>
+
+        <label for="details" class="form-section">Details:</label>
+
+        <label for="treeType">Tree Type</label>
+        <select id="treeType" name="treeType" required>
+            <option value="">Select</option>
+            <option value="oak">Oak</option>
+            <option value="pine">Pine</option>
+            <option value="palm">Palm</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="typeOfService">Type of Service</label>
+        <select id="typeOfService" name="typeOfService" required>
+            <option value="">Select</option>
+            <option value="fullTreeRemoval">Full Tree Removal</option>
+            <option value="limbRemovalOnly">Limb Removal Only</option>
+            <option value="stumpGrinding">Stump Grinding</option>
+        </select>
+
+        <label for="treeHeight">Tree Height</label>
+        <select id="treeHeight" name="treeHeight" required>
+            <option value="">Select</option>
+            <option value="under20">Under 20ft</option>
+            <option value="20-40">20ft - 40ft</option>
+            <option value="40-60">40ft - 60ft</option>
+            <option value="over60">60+ ft</option>
+        </select>
+
+        <label for="numOfTrees">Number of Trees</label>
+        <select id="numOfTrees" name="numOfTrees" required>
+            <option value="">Select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="over6">6+</option>
+        </select>
+        
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" rows="4"></textarea>
+        <button type="submit">Get a Quote</button>
+    </form>
+
+    <div class="trust">
+        <p>
+            Licensed & Insured Services
+        </p>
+    </div>
+</main>
+
+
+<script>
+document.getElementById("leadform").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  try {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbw_KdKOSrEKeL_Lj0Adc14pBDpY4wc-TGteYdWhtq5OPf-OqxDGUJEuypv2J6y3g90XaA/exec", {
+      method: "POST",
+      body: formData
+    });
+
+    if (response.ok) {
+      window.location.href = "thank_you.html";
+    } else {
+      alert("Error submitting form. Please try again.");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Error submitting form. Please try again.");
+  }
+});
+</script>
+
+</body>
+</html>
+
