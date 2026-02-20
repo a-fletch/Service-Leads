@@ -155,9 +155,28 @@ section + section::before {
   box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
+/* Desktop (default) - buttons side by side */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* allows wrapping if screen is very narrow */
+}
+
+/* Mobile: stack buttons vertically */
 @media (max-width: 768px) {
-  section { padding: 60px 15px; }
-  .steps { flex-direction: column; align-items: center; }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;       /* space between stacked buttons */
+    align-items: center;
+  }
+
+  .hero-buttons a {
+    width: 80%;       /* make them fill most of the mobile screen */
+    min-width: auto;  /* remove desktop min-width */
+    margin-right: 0;  /* remove desktop right margin */
+  }
 }
 </style>
 </head>
@@ -182,8 +201,10 @@ section + section::before {
 <p>
 Finding reliable service professionals shouldn’t feel like a gamble. ProHive makes it simple to request quotes, compare options, and hire confidently — all in one place.
 </p>
-<a href="index.html#services" class="btn-primary">Request a Quote</a>
-<a href="index.html#join-us" class="btn-secondary">Become a Service Provider</a>
+<div class="hero-buttons">
+  <a href="index.html#services" class="btn-primary">Request a Quote</a>
+  <a href="index.html#join-us" class="btn-secondary">Become a Service Provider</a>
+</div>
 </div>
 </section>
 
@@ -284,8 +305,10 @@ ProHive was created with one goal in mind:
 <p>
 Whether you need a project completed or want to grow your service business, ProHive makes it easier.
 </p>
-<a href="index.html#services" class="btn-primary">Request a Quote</a>
-<a href="index.html#join-us" class="btn-secondary">Become a Service Provider</a>
+<div class="hero-buttons">
+  <a href="index.html#services" class="btn-primary">Request a Quote</a>
+  <a href="index.html#join-us" class="btn-secondary">Become a Service Provider</a>
+</div>
 </div>
 </section>
 </main>
