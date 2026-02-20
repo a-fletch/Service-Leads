@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About ProHive | www.ProHive.us</title>
+
+<style>
+body { font-family: Arial; background: #f7f7f7; color: #333; margin: 0; }
+
+header {
+  height: 300px;
+  background-image: url("images/prohive_logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #0b141d;
+}
+
+.menu-bar {
+  background-color: #0b141d;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-bar > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-bar li {
+  margin: 0 15px;
+}
+
+.menu-bar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 15px 10px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.menu-bar a:hover {
+  color: #2ab0b0;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+section + section::before {
+  content: "";
+  display: block;
+  width: 90%;
+  max-width: 800px;
+  height: 3px;
+  background: #2ab0b0;
+  margin: 0 auto 40px;
+  border-radius: 3px;
+}
+
+.hero {
+  background: #ffffff;
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+  color: #0b141d;
+}
+
+.hero p {
+  max-width: 750px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.btn-primary {
+  background: #2ab0b0;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-right: 10px;
+  display: inline-block;
+  min-width: 160px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #238e8e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+  border: 2px solid #2ab0b0;
+  color: #2ab0b0;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  min-width: 160px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #2ab0b0;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.content-wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.list {
+  text-align: left;
+  max-width: 600px;
+  margin: 30px auto 0;
+}
+
+.list li {
+  margin: 12px 0;
+  font-size: 1.05rem;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.step {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  max-width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  section { padding: 60px 15px; }
+  .steps { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+
+<body>
+
+<header></header>
+
+<nav class="menu-bar">
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="index.html#services">Services</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="index.html#join-us">Join Us</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="content-wrapper">
+<h1>Connecting Homeowners with Trusted Local Pros — Without the Hassle</h1>
+<p>
+Finding reliable service professionals shouldn’t feel like a gamble. ProHive makes it simple to request quotes, compare options, and hire confidently — all in one place.
+</p>
+<a href="index.html#services" class="btn-primary">Request a Quote</a>
+<a href="index.html#join-us" class="btn-secondary">Become a Service Provider</a>
+</div>
+</section>
+
+<!-- PROBLEM -->
+<section>
+<div class="content-wrapper">
+<h2>Hiring Home Services Is Frustrating</h2>
+
+<p><strong>Homeowners deal with:</strong></p>
+<ul class="list">
+  <li>No shows and slow responses</li>
+  <li>Unclear pricing or hidden costs</li>
+  <li>Endless phone calls</li>
+  <li>Unverified or inexperienced contractors</li>
+</ul>
+
+<p><strong>Contractors deal with:</strong></p>
+<ul class="list">
+<li>Low quality leads</li>
+<li>Difficulty prioritizing high-value jobs</li>
+<li>Unclear project details</li>
+<li>Wasted marketing spend on ads that don’t work</li>
+</ul>
+
+<p><strong>There’s a better way.</strong></p>
+</div>
+</section>
+
+<!-- SOLUTION -->
+<section>
+<div class="content-wrapper">
+<h2>How ProHive Works</h2>
+
+<div class="steps">
+  <div class="step">
+    <h3>1. Submit Your Project</h3>
+    <p>Tell us what you need with a quick, guided form.</p>
+  </div>
+  <div class="step">
+    <h3>2. Get Matched with Local Pros</h3>
+    <p>We connect you with qualified service providers in your area.</p>
+  </div>
+  <div class="step">
+    <h3>3. Compare & Choose with Confidence</h3>
+    <p>Review your options, ask questions, and hire the right fit.</p>
+  </div>
+</div>
+
+<p style="margin-top:40px;"><strong>Simple. Transparent. Efficient.</strong></p>
+</div>
+</section>
+
+<!-- DIFFERENCE -->
+<section>
+<div class="content-wrapper">
+<h2>What Makes ProHive Different</h2>
+
+<ul class="list">
+<li>Pre-qualified project details</li>
+<li>Clear service categories</li>
+<li>Local-first approach</li>
+<li>No overwhelming spam calls</li>
+<li>Built for both homeowners and professionals</li>
+</ul>
+
+<p style="margin-top:30px;">
+<strong>ProHive is designed to create better matches — not just more noise.</strong>
+</p>
+</div>
+</section>
+
+<!-- MISSION -->
+<section>
+<div class="content-wrapper">
+<h2>Built for Growth, Rooted in Local Service</h2>
+
+<p>
+ProHive was created with one goal in mind:
+<strong>To simplify the connection between homeowners and skilled professionals.</strong>
+</p>
+
+<ul class="list">
+<li>Homeowners deserve reliable options.</li>
+<li>Contractors deserve high-intent opportunities.</li>
+<li>The process should be straightforward and transparent.</li>
+</ul>
+
+<p style="margin-top:30px;">
+We’re starting local — and building something better.
+</p>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="hero">
+<div class="content-wrapper">
+<h2>Ready to Get Started?</h2>
+<p>
+Whether you need a project completed or want to grow your service business, ProHive makes it easier.
+</p>
+<a href="index.html#services" class="btn-primary">Request a Quote</a>
+<a href="index.html#join-us" class="btn-secondary">Become a Service Provider</a>
+</div>
+</section>
+
+</body>
+</html>
