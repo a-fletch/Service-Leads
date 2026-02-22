@@ -209,6 +209,19 @@ section + section::before {
   section { padding: 60px 15px; }
   .steps { flex-direction: column; align-items: center; }
   .content-card { padding: 30px; }
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: auto;
+    min-width: 120px;
+    margin: 0 auto;
+  }
 }
 </style>
 </head>
@@ -233,8 +246,10 @@ section + section::before {
 <p>
 Finding reliable service professionals shouldn’t feel like a gamble. ProHive makes it simple to request quotes, compare options, and hire confidently — all in one place.
 </p>
-<a href="index.html#services" class="btn-primary">Request a Quote</a>
-<a href="join.html" class="btn-secondary">Become a Service Provider</a>
+<div class="hero-buttons">
+  <a href="index.html#services" class="btn-primary">Request a Quote</a>
+  <a href="join.html" class="btn-secondary">Become a Service Provider</a>
+</div>
 </div>
 </section>
 
@@ -338,8 +353,10 @@ Finding reliable service professionals shouldn’t feel like a gamble. ProHive m
 <p>
 Whether you need a project completed or want to grow your service business, ProHive makes it easier.
 </p>
-<a href="index.html#services" class="btn-primary">Request a Quote</a>
-<a href="join.html" class="btn-secondary">Become a Service Provider</a>
+<div class="hero-buttons">
+  <a href="index.html#services" class="btn-primary">Request a Quote</a>
+  <a href="join.html" class="btn-secondary">Become a Service Provider</a>
+</div>
 </div>
 </section>
 </main>
