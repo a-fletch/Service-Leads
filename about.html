@@ -155,28 +155,60 @@ section + section::before {
   box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
-/* Desktop (default) - buttons side by side */
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-  flex-wrap: wrap; /* allows wrapping if screen is very narrow */
+/* ===== PREMIUM CONTENT CARD ===== */
+.content-card {
+  background: white;
+  padding: 40px 45px;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  max-width: 760px;
+  margin: 45px auto 0;
+  border-left: 6px solid #2ab0b0;
+  text-align: left;
 }
 
-/* Mobile: stack buttons vertically */
-@media (max-width: 768px) {
-  .hero-buttons {
-    flex-direction: column;
-    gap: 15px;       /* space between stacked buttons */
-    align-items: center;
-  }
+.content-card .list {
+  margin-top: 5px;   /* previously 30px, now very close to preceding <p> */
+  margin-bottom: 20px; /* optional, space after list */
+  padding-left: 0;   /* optional, your dot style handles the bullet */
+}
 
-  .hero-buttons a {
-    width: 80%;       /* make them fill most of the mobile screen */
-    min-width: auto;  /* remove desktop min-width */
-    margin-right: 0;  /* remove desktop right margin */
-  }
+.content-card p {
+  margin: 0;         /* remove extra bottom margin from <p> above list */
+  line-height: 1.5;  /* slightly tighter */
+  font-size: 1.05rem;
+  color: #555;
+}
+
+/* Custom Brand Dots */
+.content-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+
+.content-card li {
+  position: relative;
+  padding-left: 24px;
+  margin: 14px 0;
+  font-size: 1.05rem;
+}
+
+.content-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  background-color: #2ab0b0;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  section { padding: 60px 15px; }
+  .steps { flex-direction: column; align-items: center; }
+  .content-card { padding: 30px; }
 }
 </style>
 </head>
@@ -190,7 +222,7 @@ section + section::before {
   <li><a href="index.html">Home</a></li>
   <li><a href="index.html#services">Services</a></li>
   <li><a href="about.html">About</a></li>
-  <li><a href="join.html">Join Us</a></li>
+  <li><a href="index.html#join-us">Join Us</a></li>
 </ul>
 </nav>
 <main>
@@ -201,36 +233,40 @@ section + section::before {
 <p>
 Finding reliable service professionals shouldn’t feel like a gamble. ProHive makes it simple to request quotes, compare options, and hire confidently — all in one place.
 </p>
-<div class="hero-buttons">
-  <a href="index.html#services" class="btn-primary">Request a Quote</a>
-  <a href="index.html#join-us" class="btn-secondary">Become a Service Provider</a>
-</div>
+<a href="index.html#services" class="btn-primary">Request a Quote</a>
+<a href="index.html#join-us" class="btn-secondary">Become a Service Provider</a>
 </div>
 </section>
 
 <!-- PROBLEM -->
 <section>
-<div class="content-wrapper">
-<h2>Hiring Home Services Is Frustrating</h2>
+  <h2>Hiring Home Services Is Frustrating</h2> <!-- moved outside the card -->
+  <div class="content-card">
 
-<p><strong>Homeowners deal with:</strong></p>
-<ul class="list">
-  <li>No shows and slow responses</li>
-  <li>Unclear pricing or hidden costs</li>
-  <li>Endless phone calls</li>
-  <li>Unverified or inexperienced contractors</li>
-</ul>
+    <p style="margin-top:10px; color: #555; font-size:1.05rem;">
+      <strong>Homeowners deal with:</strong>
+    </p>
+    <ul class="list">
+      <li>No shows and slow responses</li>
+      <li>Unclear pricing or hidden costs</li>
+      <li>Endless phone calls</li>
+      <li>Unverified or inexperienced contractors</li>
+    </ul>
 
-<p><strong>Contractors deal with:</strong></p>
-<ul class="list">
-<li>Low quality leads</li>
-<li>Difficulty prioritizing high-value jobs</li>
-<li>Unclear project details</li>
-<li>Wasted marketing spend on ads that don’t work</li>
-</ul>
+    <p style="margin-top:20px; color: #555; font-size:1.05rem;">
+      <strong>Contractors deal with:</strong>
+    </p>
+    <ul class="list">
+      <li>Low quality leads</li>
+      <li>Difficulty prioritizing high-value jobs</li>
+      <li>Unclear project details</li>
+      <li>Wasted marketing spend on ads that don’t work</li>
+    </ul>
 
-<p><strong>There’s a better way.</strong></p>
-</div>
+    <p style="margin-top:20px; color: #555; font-size:1.05rem;">
+      <strong>There’s a better way.</strong>
+    </p>
+  </div>
 </section>
 
 <!-- SOLUTION -->
@@ -259,43 +295,40 @@ Finding reliable service professionals shouldn’t feel like a gamble. ProHive m
 
 <!-- DIFFERENCE -->
 <section>
-<div class="content-wrapper">
-<h2>What Makes ProHive Different</h2>
+  <h2>What Makes ProHive Different</h2> <!-- header outside card -->
+  <div class="content-card">
+    <ul class="list">
+      <li>Pre-qualified project details</li>
+      <li>Clear service categories</li>
+      <li>Local-first approach</li>
+      <li>No overwhelming spam calls</li>
+      <li>Built for both homeowners and professionals</li>
+    </ul>
 
-<ul class="list">
-<li>Pre-qualified project details</li>
-<li>Clear service categories</li>
-<li>Local-first approach</li>
-<li>No overwhelming spam calls</li>
-<li>Built for both homeowners and professionals</li>
-</ul>
-
-<p style="margin-top:30px;">
-<strong>ProHive is designed to create better matches — not just more noise.</strong>
-</p>
-</div>
+    <p style="margin-top:20px; color: #555; font-size:1.05rem;">
+      <strong>ProHive is designed to create better matches — not just more noise.</strong>
+    </p>
+  </div>
 </section>
 
 <!-- MISSION -->
 <section>
-<div class="content-wrapper">
-<h2>Built for Growth, Rooted in Local Service</h2>
+  <h2>Built for Growth, Rooted in Local Service</h2> <!-- header outside card -->
+  <div class="content-card">
+    <p style="color: #555; font-size: 1.05rem;">
+      <strong>ProHive was created with one goal in mind: To simplify the connection between homeowners and skilled professionals.</strong>
+    </p>
 
-<p>
-ProHive was created with one goal in mind:
-<strong>To simplify the connection between homeowners and skilled professionals.</strong>
-</p>
+    <ul class="list">
+      <li>Homeowners deserve reliable options.</li>
+      <li>Contractors deserve high-intent opportunities.</li>
+      <li>The process should be straightforward and transparent.</li>
+    </ul>
 
-<ul class="list">
-<li>Homeowners deserve reliable options.</li>
-<li>Contractors deserve high-intent opportunities.</li>
-<li>The process should be straightforward and transparent.</li>
-</ul>
-
-<p style="margin-top:30px;">
-<strong>We’re starting local — and building something better.</strong>
-</p>
-</div>
+    <p style="margin-top:20px; color: #555; font-size:1.05rem;">
+      <strong>We’re starting local — and building something better.</strong>
+    </p>
+  </div>
 </section>
 
 <!-- CTA -->
@@ -305,10 +338,8 @@ ProHive was created with one goal in mind:
 <p>
 Whether you need a project completed or want to grow your service business, ProHive makes it easier.
 </p>
-<div class="hero-buttons">
-  <a href="index.html#services" class="btn-primary">Request a Quote</a>
-  <a href="index.html#join-us" class="btn-secondary">Become a Service Provider</a>
-</div>
+<a href="index.html#services" class="btn-primary">Request a Quote</a>
+<a href="index.html#join-us" class="btn-secondary">Become a Service Provider</a>
 </div>
 </section>
 </main>
