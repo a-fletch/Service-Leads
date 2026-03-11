@@ -215,6 +215,21 @@ form button:hover {
   .hero-text p {
     font-size: 0.95rem;    /* scale down subheadline */
   }
+
+  .menu-bar > ul {
+    flex-direction: column;   /* stack menu items vertically */
+    gap: 10px;                /* spacing between items */
+    padding: 15px 0;          /* optional padding */
+  }
+
+  .menu-bar li {
+    margin: 0;                /* remove horizontal margins */
+  }
+
+  .menu-bar a {
+    padding: 12px 0;          /* more vertical spacing for tapping */
+    font-size: 1rem;          /* slightly smaller text on mobile */
+  }
 }
 </style>
 </head>
