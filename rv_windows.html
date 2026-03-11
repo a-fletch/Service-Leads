@@ -217,18 +217,18 @@ form button:hover {
   }
 
   .menu-bar > ul {
-    flex-direction: column;   /* stack menu items vertically */
-    gap: 10px;                /* spacing between items */
-    padding: 15px 0;          /* optional padding */
+    justify-content: space-around; /* spreads items evenly */
+    flex-wrap: nowrap;              /* prevent wrapping */
+    padding: 0 10px;                /* optional small padding */
   }
 
   .menu-bar li {
-    margin: 0;                /* remove horizontal margins */
+    margin: 0;                      /* remove extra horizontal margins */
   }
 
   .menu-bar a {
-    padding: 12px 0;          /* more vertical spacing for tapping */
-    font-size: 1rem;          /* slightly smaller text on mobile */
+    padding: 12px 8px;              /* slightly smaller padding to fit */
+    font-size: 0.95rem;             /* optional smaller font on mobile */
   }
 }
 </style>
