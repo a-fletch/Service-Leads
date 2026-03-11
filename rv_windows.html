@@ -189,6 +189,32 @@ form button:hover {
   .form-side {
     padding: 40px 25px;
   }
+
+  .form-wrapper {
+    max-width: 100%;       /* ensures wrapper does not exceed screen */
+    padding: 0 15px;       /* small horizontal padding */
+    margin: 0 auto;        /* center the form */
+  }
+
+  form input,
+  form select,
+  form textarea {
+    max-width: 100%;       /* prevents inputs from stretching too far */
+    font-size: 0.95rem;    /* slightly smaller text on small screens */
+  }
+
+  form button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;     /* scale down headline */
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;    /* scale down subheadline */
+  }
 }
 </style>
 </head>
