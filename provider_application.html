@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Become a Provider | www.ProHive.us</title>
+<title>www.ProHive.us/rv_windows</title>
 
 <style>
-  main { max-width: 1000px; margin: 40px auto; padding: 20px; background: #f7f7f7; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
-  body { font-family: Arial, sans-serif; background: #f7f7f7; color: #333; margin: 0; }
-
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+    color: #333;
+  }
+  
+  /* Header */
   header {
     height: 400px;
     background-image: url("images/prohive_logo.png");
@@ -17,12 +22,13 @@
     background-repeat: no-repeat;
     background-color: #0b141d;
   }
-
+  
+  /* Navigation */
   .menu-bar {
     background-color: #0b141d;
     text-align: center;
   }
-
+  
   .menu-bar > ul {
     list-style: none;
     margin: 0;
@@ -30,129 +36,200 @@
     display: flex;
     justify-content: center;
   }
-
-  .menu-bar li { margin: 0 15px; }
-
+  
+  .menu-bar li {
+    margin: 0 18px;
+  }
+  
   .menu-bar a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     padding: 15px 10px;
     display: block;
+    transition: 0.3s ease;
   }
-
-  .menu-bar a:hover { color: #2ab0b0; }
-
-  section { padding: 70px 20px; text-align: center; }
-
-  section + section::before {
-    content: "";
+  
+  .menu-bar a:hover {
+    color: #2ab0b0;
+  }
+  
+  /* Split Layout */
+  .page-container {
+    display: flex;
+    min-height: calc(100vh - 240px);
+  }
+  
+  /* Image Side */
+  .image-side {
+    flex: 1;
+    background-image: url("images/application.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Form Side */
+  .form-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 40px;
+    background: #ffffff;
+  }
+  
+  /* Form Card */
+  .form-wrapper {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Headline Section */
+  .hero-text {
+    margin-bottom: 25px;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.9rem;
+    margin: 0 0 10px;
+    color: #0b141d;
+    line-height: 1.2;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* Section Titles */
+  .form-section {
     display: block;
-    width: 90%;
-    max-width: 800px;
-    height: 3px;
-    background: #2ab0b0;
-    margin: 0 auto 40px;
-    border-radius: 3px;
-  }
-
-  .hero { background: white; }
-
-  .hero h1 {
-    font-size: 2.3rem;
-    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 30px 0 15px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #2ab0b0;
     color: #0b141d;
   }
-
-  .hero p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1.05rem;
-    color: #555;
-  }
-
-  .content-card {
-    background: white;
-    padding: 40px 45px;
-    border-radius: 8px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    max-width: 760px;
-    margin: 45px auto 0;
-    border-left: 6px solid #2ab0b0;
-    text-align: left;
-  }
-
-  .content-card label {
-    font-weight: bold;
+  
+  /* Labels */
+  form label {
     display: block;
-    margin-top: 20px;
+    margin: 16px 0 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #0b141d;
   }
-
-  .content-card input,
-  .content-card select,
-  .content-card textarea {
+  
+  /* Inputs */
+  form input,
+  form select,
+  form textarea {
     width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
     font-size: 1rem;
-    box-sizing: border-box;
+    background: #fafafa;
+    transition: all 0.25s ease;
   }
-
-  .content-card input:focus,
-  .content-card select:focus,
-  .content-card textarea:focus {
+  
+  form input:focus,
+  form select:focus,
+  form textarea:focus {
     outline: none;
     border-color: #2ab0b0;
-    box-shadow: 0 0 0 3px rgba(42,176,176,0.25);
+    box-shadow: 0 0 0 3px rgba(42,176,176,0.15);
+    background: #ffffff;
   }
-
-  .content-card textarea {
-    min-height: 120px;
-    resize: vertical;
-  }
-
-  .submit-btn {
-    margin-top: 25px;
+  
+  /* Button */
+  form button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
     background: #2ab0b0;
-    color: white;
+    color: #ffffff;
     border: none;
-    padding: 14px 22px;
-    font-size: 1rem;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
   }
-
-  .submit-btn:hover {
-    background: #239696;
+  
+  form button:hover {
+    background: #238e8e;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   }
-
-  footer {
+  
+  /* Trust Text */
+  .trust {
+    margin-top: 25px;
     text-align: center;
-    padding: 40px 20px;
     font-size: 0.9rem;
-    color: #777;
+    color: #666;
   }
-
-  @media (max-width:768px){
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .page-container {
+      flex-direction: column;
+    }
+  
+    .image-side {
+      height: 280px;
+    }
+  
+    .form-side {
+      padding: 40px 25px;
+    }
+  
+    .form-wrapper {
+      max-width: 100%;       /* ensures wrapper does not exceed screen */
+      padding: 0 15px;       /* small horizontal padding */
+      margin: 0 auto;        /* center the form */
+    }
+  
+    form input,
+    form select,
+    form textarea {
+      max-width: 100%;       /* prevents inputs from stretching too far */
+      font-size: 0.95rem;    /* slightly smaller text on small screens */
+    }
+  
+    form button {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  
+    .hero-text h1 {
+      font-size: 1.5rem;     /* scale down headline */
+    }
+  
+    .hero-text p {
+      font-size: 0.95rem;    /* scale down subheadline */
+    }
+  
     .menu-bar > ul {
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    padding: 0 10px;
+      justify-content: space-around; /* spreads items evenly */
+      flex-wrap: nowrap;              /* prevent wrapping */
+      padding: 0 10px;                /* optional small padding */
     }
-    .menu-bar li { margin:0 }
+  
+    .menu-bar li {
+      margin: 0;                      /* remove extra horizontal margins */
+    }
+  
     .menu-bar a {
-    padding:12px 8px;
-    font-size:0.95rem;
+      padding: 12px 8px;              /* slightly smaller padding to fit */
+      font-size: 0.95rem;             /* optional smaller font on mobile */
     }
-
-    .content-card {
-    padding: 25px 18px;
-    margin: 30px auto 0;
-  }
-}
   }
 </style>
 </head>
@@ -162,106 +239,114 @@
 <header></header>
 
 <nav class="menu-bar">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="index.html#services">Services</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="join.html">Join Us</a></li>
-</ul>
+  <ul>
+    <li><a href="index.html">Home</a></li>  
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="join.html">Join Us</a></li>
+  </ul>
 </nav>
 
-<main>
+<div class="page-container">
 
-  <section class="hero">
-    <h1>Become a ProHive Service Provider</h1>
-    <p>
-    Join the ProHive network and connect with customers actively looking
-    for reliable professionals in their area.
-    </p>
-  </section>
+  <!-- Image Column -->
+  <div class="image-side"></div>
 
-  <section>
-    <h2>Provider Application</h2>
+  <!-- Form Column -->
+  <div class="form-side">
+    <div class="form-wrapper">
 
-    <div class="content-card">
+      <!-- Headline & Subheadline -->
+      <div class="hero-text">
+        <h1>Become a ProHive Service Provider</h1>
+        <p>Join the ProHive network and connect with customers actively looking for reliable professionals in their area.</p>
+      </div>
 
       <form id="leadform">
 
+        <label for="contactInfo" class="form-section">Contact Information:</label>
+        
         <label for="firstName">First Name</label>
         <input type="text" id="firstName" name="firstName" required>
 
         <label for="lastName">Last Name</label>
         <input type="text" id="lastName" name="lastName" required>
 
-        <label>Business Name</label>
-        <input type="text" name="business">
+        <label for="businessName">Business Name</label>
+        <input type="text" id="businessName" name="businessName" required>
 
-        <label>Email Address</label>
-        <input type="email" name="email" required>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required>
 
-        <label>Phone Number</label>
-        <input type="tel" name="phone" required>
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" required>
 
-        <label>Service Category</label>
-        <select name="service" required>
-        <option value="">Select a service</option>
-        <option value="Mobile RV Services">Mobile RV Services</option>
-        <option value="Home Cleaning">Home Cleaning</option>
-        <option value="Office Cleaning">Office Cleaning</option>
-        <option value="Flooring">Flooring</option>
-        <option value="Roofing">Roofing</option>
-        <option value="Mobile Detailing">Mobile Detailing</option>
-        <option value="Painting">Painting</option>
-        <option value="Handyman">Handyman</option>
-        <option value="Tree Services">Tree Services</option>
-        <option value="Landscaping">Landscaping</option>
-        <option value="Other">Other</option>
+        <label for="vehicleInfo" class="form-section">Business Information:</label>
+        
+        <label for="serviceCategory">Service Category</label>
+        <select id="serviceCategory" name="serviceCategory" required>
+            <option value="">Select a service</option>
+            <option value="Mobile RV Services">Mobile RV Services</option>
+            <option value="Home Cleaning">Home Cleaning</option>
+            <option value="Office Cleaning">Office Cleaning</option>
+            <option value="Flooring">Flooring</option>
+            <option value="Roofing">Roofing</option>
+            <option value="Mobile Detailing">Mobile Detailing</option>
+            <option value="Painting">Painting</option>
+            <option value="Handyman">Handyman</option>
+            <option value="Tree Services">Tree Services</option>
+            <option value="Landscaping">Landscaping</option>
+            <option value="Other">Other</option>
+        </select>    
+
+        <label for="serviceArea">Service Area (City or ZIP)</label>
+        <input type="text" id="serviceArea" name="serviceArea" required>
+
+        <label for="yearsOfExperience">Years of Experience</label>
+        <select id="yearsOfExperience" name="yearsOfExperience" required>
+            <option value="">Experience</option>
+            <option value="under1Year">Less than 1 year</option>
+            <option value="1-3 year">1-3 year</option>
+            <option value="3-5 years">3-5 years</option>
+            <option value="5+ years">5+ years</option>
         </select>
+        
+        <label for="notes">Tell us about your services</label>
+        <textarea id="notes" name="notes" rows="4"></textarea>
 
-        <label>Service Area (City or ZIP)</label>
-        <input type="text" name="service_area" required>
+        <p style="font-size:0.95rem; color:#0b141d; margin-top:20px; line-height:1.4;">
+          By submitting this form, you agree to the <a href="terms.html" style="color:#2ab0b0; text-decoration:underline;">Terms of Service</a> and <a href="privacy.html" style="color:#2ab0b0; text-decoration:underline;">Privacy Policy</a>.
+        </p>
 
-        <label>Years of Experience</label>
-        <select name="experience">
-        <option>Less than 1 year</option>
-        <option>1-3 years</option>
-        <option>3-5 years</option>
-        <option>5+ years</option>
-        </select>
-
-        <label>Tell us about your services</label>
-        <textarea name="details"></textarea>
-
-        <button class="submit-btn" type="submit">Apply to Join</button>
-
+        <button type="submit">Apply to Join</button>
       </form>
-    </div>
-  </section>
-</main>
 
-<footer>© 2026 ProHive Services, LLC. All rights reserved.</footer>
+    </div>
+  </div>
+
+</div>
 
 <script>
-    document.getElementById("leadform").addEventListener("submit", async function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-    
-      try {
-        const response = await fetch("APP_SCRIPT_ENDPOINT", {
-          method: "POST",
-          body: formData
-        });
-    
-        if (response.ok) {
-          window.location.href = "thank_you.html";
-        } else {
-          alert("Error submitting form. Please try again.");
-        }
-      } catch (error) {
-        console.error(error);
-        alert("Error submitting form. Please try again.");
-      }
+document.getElementById("leadform").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+
+  try {
+    const response = await fetch("APP_SCRIPT", {
+      method: "POST",
+      body: formData
     });
+
+    if (response.ok) {
+      window.location.href = "thank_you.html";
+    } else {
+      alert("Error submitting form. Please try again.");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Error submitting form. Please try again.");
+  }
+});
 </script>
 
 </body>
